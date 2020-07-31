@@ -1,0 +1,18 @@
+@bot.command(name='hi', aliases=['hello'])
+async def _hi(ctx):
+    """
+    A simple command which says hi to the author.
+    """
+    await ctx.send(f"Hi {ctx.author.mention}!")
+    # Another way to do this code is (user object).mention
+    # await ctx.send(f"Hi <@{ctx.author.id}>!")
+
+
+@bot.command()
+async def echo(ctx, *, message=None):
+    """
+    A simple command that repeats the users input back to them.
+    """
+    message = message or "Please provide the message to be repeated."
+    await ctx.message.delete()
+    await ctx.send(message)
