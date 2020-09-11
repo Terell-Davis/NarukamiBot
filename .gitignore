@@ -1,3 +1,5 @@
 .env
 /shelf/
 /workspace.xml
+/cogs/Music.py
+/cogs/Minecraft.py
