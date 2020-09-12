@@ -94,14 +94,14 @@ class Minecraft(commands.Cog):
     @commands.command()
     async def mstart(self, ctx):
         print("Starting Minecraft Server")
-        #subprocess.call('screen -dmS minecraft', shell=True)
+        subprocess.call('screen -dmS minecraft', shell=True)
         subprocess.call(f'screen -S minecraft -p 0 -X stuff "cd {minecraft}^M"', shell=True)
         time.sleep(0.5)
         subprocess.call('screen -S minecraft -p 0 -X stuff ' +
                         f'"java -Xms2048M -Xmx4096M -jar server.jar nogui^M"',
                         shell=True)
         time.sleep(5)
-        #subprocess.call('screen -S minecraft -p 0 -X stuff help^M', shell=True) # This is cheating to fill up console
+        subprocess.call('screen -S minecraft -p 0 -X stuff help^M', shell=True) # This is cheating to fill up console
         await ctx.send("Minecraft Server is starting.......")
 
     @commands.command()
