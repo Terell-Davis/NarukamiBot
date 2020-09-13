@@ -1,7 +1,6 @@
 from discord import utils
 from discord import embeds
 from discord.ext import commands
-import lavalink
 
 
 class Music(commands.Cog):

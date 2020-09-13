@@ -53,12 +53,13 @@ def is_owner(ctx):
 
 @bot.command()
 async def shutdown(ctx):
-    message = f'{ctx.author} is not authorized to shutdown this bot!'
-    if ctx.author.id == owner:
+    user = ctx.author.id
+    if user == owner:
         message = f'{ctx.author} is authorized, Shutting Down Bot......'
         await ctx.send(message)
         await bot.close()
     else:
+        message = f'{ctx.author} is not authorized to shutdown this bot!'
         await ctx.send(message)
 
 
