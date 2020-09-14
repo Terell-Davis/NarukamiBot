@@ -1,7 +1,10 @@
 TOKEN= #This is your bot token
 OWNER_ID= # This is your discord ID
 OUTPUT= # This is a txt to log server console and report back
-PREFIX=n!
-Terraria= # This is the path to Terraria Server (Needed by tstart, tstop, trestart)
-ModdedTerraria= # This is the path to Modded Terraria Server (Needed by mtstart, mtstop, mtrestart)
-Minecraft= # This is the path to Minecraft Server (Needed by mstart, mstop, mrestart)
+PREFIX=n! # Prefix for the bot for commands
+Terraria= # Path to Terraria Server
+ModdedTerraria= # Path to Modded Terraria Server
+Minecraft= # Path to Minecraft Server
+MinecraftMin=2048M
+MinecraftMax=4096M
+ServerJarName=server.jar

@@ -1,7 +1,7 @@
 from discord.ext import commands
 
 
-class Example(commands.Cog):
+class Template(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -16,4 +16,4 @@ class Example(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Example(bot))
+    bot.add_cog(Template(bot))
