@@ -22,7 +22,7 @@ async def on_ready():
     print(f'{bot.user.name} with id:{bot.user.id} is now ready!\nCurrent bot prefix is: {prefix}') # Just for the terminal
     print(f'The current owner id is: {owner}')
     await bot.change_presence(activity=discord.Game(name=f"Persona 5 Royal {prefix}help")) # Sets Status
-    # await bot.change_presence(activity=discord.Game(name=f"Phoenix Wright: Ace Attorney")) # Used for upcoming AdachiBot
+    #  await bot.change_presence(activity=discord.Game(name=f"Phoenix Wright: Ace Attorney")) # Used for upcoming AdachiBot
 
 
 @bot.event
