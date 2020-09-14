@@ -48,9 +48,13 @@ class ServerStarter(commands.Cog):
         elif arg1 == "MTerraria":
             subprocess.call('screen -dmS moddedterraria', shell=True)
             subprocess.call('screen -S moddedterraria -p 0 -X stuff ' +
-                            f'"TERM=xterm {moddedterraria}/tModLoaderServer.bin.x86_64^M ' +
-                            '-config {moddedterraria}/serverconfig.txt^M"', shell=True)
-            time.sleep(1)
+                            f'"TERM=xterm {moddedterraria}/tModLoaderServer.bin.x86_64^M"', shell=True)
+            time.sleep(10)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff 1^M', shell=True)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff 8^M', shell=True)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff 7777^M', shell=True)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff ^M', shell=True)
+            time.sleep(10)
             subprocess.call('screen -S moddedterraria -p 0 -X stuff help^M', shell=True)
             await ctx.send("**Modded Terraria Server Started**")
 
@@ -147,11 +151,14 @@ class ServerStarter(commands.Cog):
 
             subprocess.call('screen -dmS moddedterraria', shell=True)
             subprocess.call('screen -S moddedterraria -p 0 -X stuff ' +
-                            f'"TERM=xterm {moddedterraria}/tModLoaderServer.bin.x86_64 ' +
-                            '-config {moddedterraria}/serverconfig.txt^M"', shell=True)
-            time.sleep(1)
+                            f'"TERM=xterm {moddedterraria}/tModLoaderServer.bin.x86_64^M"', shell=True)
+            time.sleep(10)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff 1^M', shell=True)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff 8^M', shell=True)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff 7777^M', shell=True)
+            subprocess.call('screen -S moddedterraria -p 0 -X stuff ^M', shell=True)
+            time.sleep(10)
             subprocess.call('screen -S moddedterraria -p 0 -X stuff help^M', shell=True)
-
             await ctx.send("**Modded Terraria Server Started**")
 
         elif arg1 == "":
