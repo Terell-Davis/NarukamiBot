@@ -2,8 +2,6 @@ import os
 from discord.ext import commands
 import subprocess
 import time
-
-from discord.ext.commands import has_permissions
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,7 +10,7 @@ terraria = os.getenv("Terraria")
 owner = os.getenv("OWNER_ID")
 
 
-class Terraria(commands.Cog): # Note: This only works if the screen is named "terraria" and bot is excuted but the same user who owns the screen
+class Terraria(commands.Cog):  # Note: This only works if the screen is named "terraria" and bot is executed but the same user who owns the screen
 
     def __init__(self, bot):
         self.bot = bot
@@ -97,11 +95,11 @@ class Terraria(commands.Cog): # Note: This only works if the screen is named "te
     @commands.command()
     async def tstop(self, ctx):
         print("Stopping Terraria Server")
-        subprocess.call('screen -S terraria -p 0 -X stuff save^M',shell=True)
+        subprocess.call('screen -S terraria -p 0 -X stuff save^M', shell=True)
         time.sleep(1)
-        subprocess.call('screen -S terraria -p 0 -X stuff exit^M',shell=True)
+        subprocess.call('screen -S terraria -p 0 -X stuff exit^M', shell=True)
         time.sleep(1)
-        subprocess.call('screen -S terraria -p 0 -X stuff exit^M',shell=True)
+        subprocess.call('screen -S terraria -p 0 -X stuff exit^M', shell=True)
         await ctx.send("Terraria Server has stopped")
 
     @commands.command()

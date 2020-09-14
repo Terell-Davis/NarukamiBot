@@ -68,10 +68,10 @@ class Minecraft(commands.Cog):
             last = lineList[len(lineList) -1]
             last = last.rstrip('\n')
 
-            await ctx.send("__Minecraft Console__")
+            await ctx.send("__Minecraft Server__")
             await ctx.send(last)
         else:
-            await ctx.send("__Minecraft Console__")
+            await ctx.send("__Minecraft Server__")
             await ctx.send(last)
 
     @commands.command()
