@@ -35,7 +35,7 @@ class ServerManager(commands.Cog):
             lineList = fileHandle.readlines()
             fileHandle.close()
             last = lineList[len(lineList) - 2]
-            last = last.rstrip('\n').rstrip('[Server thread/INFO]')
+            last = last.rstrip('\n')
 
             await ctx.send("__Minecraft Server__")
             await ctx.send(f'{last}')
@@ -87,7 +87,7 @@ class ServerManager(commands.Cog):
             fileHandle.close()
 
             last = lineList[len(lineList) - 2]
-            last = last.rstrip('\n').rstrip('[Server thread/INFO]')
+            last = last.rstrip('\n')
 
             await ctx.send("__Minecraft Server__")
             await ctx.send(f'{last}')
@@ -141,7 +141,7 @@ class ServerManager(commands.Cog):
             fileHandle.close()
 
             last = lineList[len(lineList) - 1]
-            last = last.rstrip('\n').rstrip('[Server thread/INFO]')
+            last = last.rstrip('\n')
 
             if last == "":
                 last = lineList[len(lineList) - 1]
@@ -200,7 +200,7 @@ class ServerManager(commands.Cog):
             fileHandle.close()
 
             last = lineList[len(lineList) - 1]
-            last = last.rstrip('\n').rstrip('[Server thread/INFO]')
+            last = last.rstrip('\n')
 
             if last == "":
                 last = lineList[len(lineList) - 1]
